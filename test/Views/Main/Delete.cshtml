@@ -1,0 +1,44 @@
+﻿@model test.Models.Song
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Вы уверены что хотите удалить эту песню?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Author)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Author)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Genre)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Genre)
+        </dd>              
+        <dt>
+            @Html.DisplayNameFor(model => model.Album)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Album)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="ID" />
+        <input type="submit" value="Удалить" class="btn btn-default" /> |
+        <a asp-action="Index">Вернуться на главную страницу</a>
+    </form>
+</div>
