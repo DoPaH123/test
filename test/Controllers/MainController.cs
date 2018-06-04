@@ -61,7 +61,7 @@ namespace test.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,Name,Author,Genre,,Album")] Song song)
+        public async Task<IActionResult> Edit(int id, [Bind("ID,Name,Author,Genre,URL,Album")] Song song)
         {
             if (id != song.ID)
             {
